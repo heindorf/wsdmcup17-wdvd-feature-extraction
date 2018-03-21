@@ -1,0 +1,240 @@
+Addbot
+AGbot
+AHbot
+AinaliBot
+AkBot
+AkkakkBot
+AlepfuBot
+AlphamaBot
+AmpersandBot
+AndreCostaWMSE-bot
+Aplikasi-Bot
+APSbot
+ASammourBot
+Atobot
+AudeBot
+AvocatoBot
+AyackBot
+B0ttle
+BalajijagadeshBot
+BaseBot
+BeneBot*
+BetaBot
+BinBot
+BMacZeroBot
+Botapyb
+Botik
+BotMultichill
+BotMultichillT
+BotNinja
+BotOrienteerix
+BoulaurBot
+BrackiBot
+BraunBot
+BraveBot
+Byrialbot
+CalakBot
+CaliburnBOT
+CennoBot
+Cewbot
+Checkallthestrings bot
+Chembot
+Chobot
+Choboty
+Citing Bot
+CommonsDelinker
+Cyberbot I
+D2-bot
+DæghrefnBot
+DangSunBot
+DangSunBot2
+DangSunFlood
+DangSunFlood2
+DanmicholoBot
+DBpedia-mapper-bot
+Dcirovicbot
+Dexbot
+DidymBot
+Dima st bk bot
+DimaBot
+Dipsacus fullonum bot
+DixonDBot
+Docu w. script
+Docu with script
+Dom bot
+DrTrigonBot
+DSisyphBot
+DynamicBot Srv2
+DynBot Srv2
+EdgarsBot
+EdinBot
+Edoderoobot
+EdwardsBot
+ElphiBot
+EmausBot
+Escabot
+Escarbot
+Faebot
+FischBot
+Flow talk page manager
+Framabot
+Frettiebot
+FrigidBot
+FuzzyBot
+GeneaBot
+Glavkos bot
+GPUBot
+GrammarwareBot
+Gzen92Bot
+GZWDer (flood)
+Hawk-Eye-Bot
+HaxpettBot
+Hazard-Bot
+Hoo Bot
+Hurricanefan25 in the storm
+HuskyBot
+HypoBOT
+InductiveBot
+InfoRobBot
+InkoBot
+Innocent bot
+Inwbot
+InwBot
+JackieBot
+JAnDbot
+Jane023bot
+JarBot
+Jeblad (bot)
+JhsBot
+JoRobot
+JVbot
+JWbot
+JYBot
+KasparBot
+KLBot2
+Kompakt-bot
+KrattBot
+KrBot
+Krdbot
+KRLS Bot
+L PBot
+LandesfilmsammlungBot
+Legobot
+Liangent-bot
+LinkRecoveryBot
+Lisp.hippie.bot
+ListeriaBot
+LocatorBot
+Louperibot
+Luuvabot
+MagulBot
+MahdiBot
+Maintenance script
+MajedBot
+Makecat-bot
+Makrobot
+MalarzBOT
+MarmaseBot
+MatmaBot
+MatSuBot
+MBAreaBot
+MdupontDataBot
+MedalBot
+MediaWiki message delivery
+MerlBot
+MerlIwBot
+MicrobeBot
+Miguillen-bot
+MineoBot
+Mjbmrbot
+Nicolas1981Bot
+NikkiBot
+Nullzerobot
+OctraBot
+ÖdokBot
+OrlodrimBot
+PBot
+Peter17-Bot
+Pigsonthewing-bot
+PingWDbot
+PLbot
+Popcornbot
+PoulpyBot
+PreferentialBot
+ProgvalInfoboxBot
+ProteinBoxBot
+Ra-bot-nik
+ReimannBot
+Reinheitsgebot
+Revibot
+Rezabot
+RileyBot
+Robbot
+RobotGMwikt
+RobotMichiel1972
+RoboViolet
+Ruud Koot (bot)
+S205643bot
+SamoaBot
+Sanjeev bot
+SanniBot
+sarojbot
+Sarojbot
+SaschaBot
+SbisoloBot
+sDrewthbot
+SDrewthbot
+ShinobiBot
+ShonagonBot
+Shuaib-bot
+Shyde
+Sk!dbot
+SKbot
+SLiuBot
+smbbot
+Smbbot
+SourcererBot
+SpBot
+StackerBot
+Steenthbot
+SteinsplitterBot
+StigBot
+Strainubot
+StrynBot
+SuccuBot
+Svenbot
+SweetBot
+Symac bot
+TambonBot
+TemirovBot
+The Anomebot 3
+The Anonybot
+Thebot
+ThieolBot
+TokokoBot
+TptBot
+Translation Notification Bot
+Tulsibot
+UnderlyingBot
+UrbanecmBot
+ValterVBot
+VIAFbot
+VIAFBot
+ViscoBot
+VollBot
+VsBot
+WapBot
+Wasabot
+Whymbot
+Widar of zolo
+WikiGrok
+Wizzo-Bot
+WYImporterBot
+WylveWidar
+Xaris333Bot
+XXN-bot
+YasBot
+ZaBOTka
+ZedlikBot
+ZiyadBot
+ZkBot

@@ -1,0 +1,26 @@
+# Compiled class file
+*.class
+
+# Package Files
+*.jar
+
+# Generated Code
+/bin/
+/target/
+
+# DotEnv configuration
+.env
+
+# Project settings
+.classpath
+.project
+.settings/
+
+# Log file
+*.log
+
+# Data
+*.bz2
+
+# Markdown
+*.md.html

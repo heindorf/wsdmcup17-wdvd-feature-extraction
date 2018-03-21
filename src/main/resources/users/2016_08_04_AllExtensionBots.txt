@@ -1,0 +1,6 @@
+127.0.0.1
+Abuse filter
+Babel AutoCreate
+FuzzyBot
+MediaWiki message delivery
+Translation Notification Bot

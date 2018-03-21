@@ -1,0 +1,93 @@
+/*
+ * WSDM Cup 2017 Baselines
+ *
+ * Copyright (c) 2017 Stefan Heindorf, Martin Potthast, Gregor Engels, Benno Stein
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package org.wsdmcup17.wdvd.extraction.features.word.misc;
+
+import java.util.regex.Pattern;
+
+import org.wsdmcup17.wdvd.extraction.features.FeatureFloatValue;
+import org.wsdmcup17.wdvd.extraction.features.FeatureImpl;
+import org.wsdmcup17.wdvd.extraction.features.Utils;
+import org.wsdmcup17.wdvd.extraction.revision.interfaces.Revision;
+import org.wsdmcup17.wdvd.extraction.revision.interfaces.TextRegex;
+
+public class ProportionOfLanguageAdded extends FeatureImpl {
+	// taken from ORES baseline
+	private static final String REGEX =
+			  "(a(frikaa?ns|lbanian?|lemanha|ng(lais|ol)|ra?b(e?|"
+			+ "[ei]c|ian?|isc?h)|rmenian?|ssamese|azeri|z[eə]rba"
+			+ "(ijani?|ycan(ca)?|yjan)|нглийский)|b(ahasa( (indonesia|"
+			+ "jawa|malaysia|melayu))?|angla|as(k|qu)e|[aeo]ng[ao]?li|"
+			+ "elarusian?|okmål|osanski|ra[sz]il(ian?)?|ritish( "
+			+ "kannada)?|ulgarian?)|c(ebuano|hina|hinese( simplified)?"
+			+ "|zech|roat([eo]|ian?)|atal[aà]n?|рпски|antonese)|[cč]"
+			+ "(esky|e[sš]tina)|d(an(isc?h|sk)|e?uts?ch)|e(esti|ll[hi]"
+			+ "nika|ng(els|le(ski|za)|lisc?h)|spa(g?[nñ]h?i?ol|nisc?h)"
+			+ "|speranto|stonian|usk[ae]ra)|f(ilipino|innish|ran[cç]"
+			+ "(ais|e|ez[ao])|ren[cs]h|arsi|rancese)|g(al(ego|ician)|"
+			+ "uja?rati|ree(ce|k)|eorgian|erman[ay]?|ilaki)|h(ayeren|"
+			+ "ebrew|indi|rvatski|ungar(y|ian))|i(celandic|ndian?|"
+			+ "ndonesian?|ngl[eê]se?|ngilizce|tali(ano?|en(isch)?))|"
+			+ "ja(pan(ese)?|vanese)|k(a(nn?ada|zakh)|hmer|o(rean?|"
+			+ "sova)|urd[iî])|l(at(in[ao]?|vi(an?|e[sš]u))|ietuvi[uų]"
+			+ "|ithuanian?)|m(a[ck]edon(ian?|ski)|agyar|alay(alam?|"
+			+ "sian?)?|altese|andarin|arathi|elayu|ontenegro|ongol"
+			+ "(ian?)|yanmar)|n(e(d|th)erlands?|epali|orw(ay|egian)|"
+			+ "orsk( bokm[aå]l)?|ynorsk)|o(landese|dia)|p(ashto|"
+			+ "ersi?an?|ol(n?isc?h|ski)|or?tugu?[eê]se?(( d[eo])? "
+			+ "brasil(eiro)?| ?\\(brasil\\))?|unjabi)|r(om[aâi]ni?[aă]n?"
+			+ "|um(ano|änisch)|ussi([ao]n?|sch))|s(anskrit|erbian|"
+			+ "imple english|inha?la|lov(ak(ian?)?|enš?[cč]ina|"
+			+ "en(e|ij?an?)|uomi)|erbisch|pagnolo?|panisc?h|rbeska|"
+			+ "rpski|venska|c?wedisc?h|hqip)|t(a(galog|mil)|elugu|"
+			+ "hai(land)?|i[eế]ng vi[eệ]t|[uü]rk([cç]e|isc?h|iş|ey))|"
+			+ "u(rdu|zbek)|v(alencia(no?)?|ietnamese)|welsh|(англиис|"
+			+ "[kк]алмыкс|[kк]азахс|немец|[pр]усс|[yу]збекс|"
+			+ "татарс)кий( язык)??|עברית|[kкқ](аза[кқ]ша|ыргызча|"
+			+ "ирилл)|українськ(а|ою)|б(еларуская|"
+			+ "ългарски( език)?)|ελλ[ηι]"
+			+ "νικ(ά|α)|ქართული|हिन्दी|ไทย|[mм]онгол(иа)?|([cс]рп|"
+			+ "[mм]акедон)ски|العربية|日本語|한국(말|어)|‌हिनद़ि|"
+			+ "বাংলা|ਪੰਜਾਬੀ|मराठी|ಕನ್ನಡ|اُردُو|தமிழ்|తెలుగు|ગુજરાતી|"
+			+ "فارسی|پارسی|മലയാളം|پښتو|မြန်မာဘာသာ|中文(简体|繁體)?|"
+			+ "中文（(简体?|繁體)）|简体|繁體)";
+
+	public static final Pattern pattern = Pattern.compile(REGEX);
+
+	@Override
+	public FeatureFloatValue calculate(Revision revision) {
+		double oldCount = 0.0;
+		TextRegex prevTextRegex = revision.getPrevTextRegex();
+		if (prevTextRegex != null) {
+			oldCount = prevTextRegex.getNumberOfLanguageWords();
+		}
+
+		double newCount = revision.getTextRegex().getNumberOfLanguageWords();
+
+		float result = Utils.proportion(oldCount, newCount);
+
+		return new FeatureFloatValue(result);
+	}
+
+}
