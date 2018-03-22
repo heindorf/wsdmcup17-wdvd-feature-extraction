@@ -55,8 +55,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * A simple program demonstrating how to connect to the WSDM Cup data server,
- * and how to parse revisions and meta data.
+ * A program connecting to WSDM Cup data servers and extracting features.
  */
 public class Main {
 
@@ -70,7 +69,7 @@ public class Main {
 	static File featureFile;
 
 	private static final String
-		WSDM_CUP_2017_CLIENT_DEMO = "WSDM Cup 2017 client demo:",
+		CMD_LINE_SYNTAX = "feature-extraction -s SERVER -t TOKEN FEATURES",
 		OPT_SERVER = "s",
 		OPT_SERVER_LONG = "server",
 		OPT_SERVER_DESC = "Data server address",
@@ -128,7 +127,7 @@ public class Main {
 			cmd = parser.parse(options, args);
 		} catch (ParseException e) {
 			System.out.println(e.getMessage());
-			formatter.printHelp(WSDM_CUP_2017_CLIENT_DEMO, options);
+			formatter.printHelp(CMD_LINE_SYNTAX, options);
 			System.exit(1);
 		}
 		return cmd;
